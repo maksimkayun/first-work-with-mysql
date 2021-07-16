@@ -13,7 +13,7 @@ public class Main {
         user = user.equals("") ? "root" : user;
         System.out.println();
 
-        System.out.print("Enter password default (empty):");
+        System.out.print("Enter password default (empty): ");
         String password = sc.nextLine().trim();
         System.out.println();
 
@@ -34,7 +34,7 @@ public class Main {
             stmt.setInt(1, Integer.parseInt(salary));
             ResultSet rs = stmt.executeQuery();
 
-            while(rs.next()){
+            while (rs.next()) {
                 System.out.println(rs.getString("name") + " " + rs.getString("department_name") +
                         " " + rs.getString("salary"));
             }
@@ -42,7 +42,5 @@ public class Main {
         } catch (SQLException throwables) {
             throwables.printStackTrace();
         }
-
-
     }
 }
